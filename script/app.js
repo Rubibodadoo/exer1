@@ -15,5 +15,5 @@ function subtractNumbers() {
 }
 
 // Add click event listeners to the buttons
-document.getElementById('multiplyButton').addEventListener("click", displaySum);
+document.getElementById('addButton').addEventListener("click", displaySum);
 document.getElementById('subtractButton').addEventListener("click", subtractNumbers);
