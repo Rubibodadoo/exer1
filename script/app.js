@@ -1,23 +1,19 @@
+// Function to display the sum of two numbers
 function displaySum() {
-  let firstNum = Number(document.getElementById('firstNum').innerHTML)
-  let secondNum = Number(document.getElementById('secondNum').innerHTML)
-
+  let firstNum = Number(document.getElementById('firstNum').textContent);
+  let secondNum = Number(document.getElementById('secondNum').textContent);
   let total = firstNum + secondNum;
-  document.getElementById("answer").innerHTML = ` ${firstNum} + ${secondNum}, equals to ${total}` ;
+  document.getElementById("answer").textContent = `${firstNum} + ${secondNum} equals to ${total}`;
 }
 
-document.getElementById('sumButton').addEventListener("click", displaySum);
+// Function to subtract two numbers
+function subtractNumbers() {
+  let firstNum = Number(document.getElementById('firstNum').textContent);
+  let secondNum = Number(document.getElementById('secondNum').textContent);
+  let result = firstNum - secondNum;
+  document.getElementById("answer").textContent = `${firstNum} - ${secondNum} equals to ${result}`;
+}
 
-// id attribute has been set in all three
-
-<span id= "firstNum">2</span> <br> 
-    ...<span id= "secondNum">7</span> 
-    ...... <span id= "answer">(placeholder for the answer)</span>
-
-//getElementById will get all HTML elements by a specific "id" attribute
-...
-let firstNum = Number(document.getElementById('firstNum').innerHTML)
-  let secondNum = Number(document.getElementById('secondNum').innerHTML)
-
-  let total = firstNum + secondNum;
-  document.getElementById("answer").innerHTML = ` ${firstNum} + ${secondNum}, equals to ${total}` ;
+// Add click event listeners to the buttons
+document.getElementById('multiplyButton').addEventListener("click", displaySum);
+document.getElementById('subtractButton').addEventListener("click", subtractNumbers);
